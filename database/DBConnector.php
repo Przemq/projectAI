@@ -17,7 +17,9 @@ class DBConnector
         try
         {
             require_once 'connection_data.php';
-            $this->db = new PDO('mysql:host='.$server_address.';dbname='.$db_name.';charset=utf8', $user_login, $user_password);
+            $this->db = new PDO('mysql:host='.$server_address.';dbname='.$db_name.';charset=utf8', $user_login
+                , $user_password);
+            $this->db->exec("set names utf8;");
             $this->jsonUtils = new JSONUtils();
         }
         catch (PDOException $e)
@@ -44,5 +46,38 @@ class DBConnector
         }
     }
 
+    public function getRecordsByID($tableName, $id) {
+        $query = 'SELECT * FROM '.$tableName.' WHERE id='.$id;
+        $query = $this->db->query($query);
+        $rows = array();
+
+        if ($query != null) {
+            while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+                $rows[] = $result;
+            }
+            $this->jsonUtils->convert_to_json($rows,200,'Success, record downloaded');
+            $query->closeCursor();
+        }
+        else {
+            $this->jsonUtils->throwError(101,'Error while getting record');
+        }
+    }
+
+    public function deleteRecordById($tableName, $id) {
+        $query = 'DELETE FROM '.$tableName.' WHERE id='.$id;
+        $query = $this->db->query($query);
+        $rows = array();
+
+        if ($query != null) {
+            while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+                $rows[] = $result;
+            }
+            $this->jsonUtils->convert_to_json($rows,200,'Success, record deleted');
+            $query->closeCursor();
+        }
+        else {
+            $this->jsonUtils->throwError(101,'Error while deleting record');
+        }
+    }
 
 }

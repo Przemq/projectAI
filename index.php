@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <title>Project</title>
     <meta name="Internet Applications Project" content="Internet Applications Project">
@@ -10,25 +10,30 @@
 
     <link rel="stylesheet" href="css/global-styles.css">
     <link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
-
-<?php
-include_once 'database/DBConnector.php';
-$test = new DBConnector();
-$test->getTable("testowa_tabela")
-?>
+    <script src="js/scripts/jquery-3.2.1.min.js" ></script>
+    <script src="js/ajax/getData.js"></script>
+    <script src="js/scripts/global-scripts.js" ></script>
+    <?php
+   // include_once 'database/DBConnector.php';
+    //$test = new DBConnector();
+    //$test->getRecordsByID("testowa_tabela", 1);
+    ?>
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti est
-                qui.
+            <div class="col-lg-12"><h2>Projekt- Aplikacje internetowe</h2></div>
+            <div class="col-lg-12">
+                <button class="btn btn-success" id="get-data">Get all users</button>
+            </div>
+            <div class="col-lg-12" id="ajax-container">
+
             </div>
         </div>
     </div>
 </div>
-<script src="js/scripts/jquery-3.2.1.min.js"></script>
-<script src="js/scripts/global-scripts.js"></script>
+
 </body>
 </html>
