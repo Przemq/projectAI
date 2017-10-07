@@ -1,3 +1,5 @@
 *.iml
 .idea/
-pass.txt
+/pass.txt
+/css/global-styles.scss
+/css/global-styles.css.map
