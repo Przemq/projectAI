@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="css/global-styles.css">
     <link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 
-
+<?php
+include_once 'database/DBConnector.php';
+$test = new DBConnector();
+?>
 </head>
 
 <body>
