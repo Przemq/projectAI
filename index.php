@@ -8,7 +8,7 @@
     <meta name="Internet Applications Project" content="Internet Applications Project">
     <meta name="author" content="Przemysław Kudła">
 
-    <link rel="stylesheet" href="css/global-style.css">
+    <link rel="stylesheet" href="css/global-styles.css">
     <link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 
 
