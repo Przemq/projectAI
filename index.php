@@ -15,9 +15,13 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-4 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti est qui.</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti est
+                qui.
+            </div>
+        </div>
     </div>
 </div>
 <script src="js/scripts/jquery-3.2.1.min.js"></script>
