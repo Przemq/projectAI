@@ -13,10 +13,9 @@
     <script src="js/scripts/jquery-3.2.1.min.js" ></script>
     <script src="js/ajax/getData.js"></script>
     <script src="js/scripts/global-scripts.js" ></script>
+
     <?php
-   // include_once 'database/DBConnector.php';
-    //$test = new DBConnector();
-    //$test->getRecordsByID("testowa_tabela", 1);
+        require_once 'utils/functions.php';
     ?>
 </head>
 

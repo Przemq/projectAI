@@ -5,9 +5,11 @@ $( document ).ready(function() {
 
     btn.addEventListener("click", function () {
         var request = new XMLHttpRequest();
-        request.open('GET', 'http://przem94.ayz.pl/projectAI/');
+        request.open('GET', 'http://przem94.ayz.pl/projectAI/services/getTable.php');
         request.onload = function () {
+            console.log(request.responseText);
             var response = JSON.parse(request.responseText);
+
             renderHTML(response);
         };
         request.send();

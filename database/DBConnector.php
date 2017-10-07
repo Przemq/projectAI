@@ -19,7 +19,6 @@ class DBConnector
             require_once 'connection_data.php';
             $this->db = new PDO('mysql:host='.$server_address.';dbname='.$db_name.';charset=utf8', $user_login
                 , $user_password);
-            $this->db->exec("set names utf8;");
             $this->jsonUtils = new JSONUtils();
         }
         catch (PDOException $e)
