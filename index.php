@@ -14,6 +14,7 @@
 <?php
 include_once 'database/DBConnector.php';
 $test = new DBConnector();
+$test->getTable("testowa_tabela")
 ?>
 </head>
 
