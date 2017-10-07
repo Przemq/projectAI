@@ -13,7 +13,7 @@ class DBConnector
     public $db;
     public $jsonUtils;
     function __construct() {
-        require_once '../utils/JSONUtils.php';
+        require_once  '../projectAI/utils/JSONUtils.php';
         try
         {
             require_once 'connection_data.php';
