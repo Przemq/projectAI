@@ -7,13 +7,14 @@
  */
 
 
+include_once($_SERVER['DOCUMENT_ROOT'].'/utils/JSONUtils.php');
 
 class DBConnector
 {
+
     public $db;
     public $jsonUtils;
     function __construct() {
-        require_once  '../projectAI/utils/JSONUtils.php';
         try
         {
             require_once 'connection_data.php';
@@ -80,3 +81,5 @@ class DBConnector
     }
 
 }
+
+

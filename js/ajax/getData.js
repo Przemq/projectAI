@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
     btn.addEventListener("click", function () {
         var request = new XMLHttpRequest();
-        request.open('GET', 'http://przem94.ayz.pl/projectAI/services/getTable.php');
+        request.open('GET', '/services/getTable.php');
         request.onload = function () {
             console.log(request.responseText);
             var response = JSON.parse(request.responseText);
@@ -19,7 +19,7 @@ $( document ).ready(function() {
         var dataString = "";
 
         for (i = 0; i < data.length; i++) {
-            dataString += "<p>" + data[i].name + " is a " + data[i].species + "</p>";
+            dataString += "<p>" + data[i].name + "</p>";
         }
 
         ajaxContainer.insertAdjacentHTML("beforeend", dataString);
