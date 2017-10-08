@@ -7,7 +7,6 @@
  */
 
 
-include_once($_SERVER['DOCUMENT_ROOT'].'/utils/JSONUtils.php');
 
 class DBConnector
 {
@@ -16,7 +15,7 @@ class DBConnector
     public $jsonUtils;
     function __construct() {
         try
-        {
+        {   require_once($_SERVER['DOCUMENT_ROOT'].'../utils/JSONUtils.php');
             require_once 'connection_data.php';
             $this->db = new PDO('mysql:host='.$server_address.';dbname='.$db_name.';charset=utf8', $user_login
                 , $user_password);
