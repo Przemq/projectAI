@@ -9,4 +9,5 @@
 
 require_once '../database/DBConnector.php';
 $test = new DBConnector();
-$test->getRecordsByID("testowa_tabela", 1);
+$test->deleteRecordById('testowa_tabela',2);
+//$test->getTable('testowa_tabela');

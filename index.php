@@ -1,5 +1,9 @@
 <!doctype html>
-
+<?php
+session_start();
+$_SESSION['root'] = 'http://przem94.ayz.pl';
+echo $_SESSION['root'];
+?>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -31,9 +35,7 @@
             <div class="col-lg-12">
                 <button class="btn btn-success" id="get-data">Get all users</button>
             </div>
-            <div class="col-lg-12" id="ajax-container">
-
-            </div>
+            <div class="col-lg-12" id="ajax-container"></div>
         </div>
     </div>
 </div>

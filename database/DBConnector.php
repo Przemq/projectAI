@@ -6,7 +6,7 @@
  * Time: 17:55
  */
 
-
+session_start();
 
 class DBConnector
 {
@@ -15,7 +15,7 @@ class DBConnector
     public $jsonUtils;
     function __construct() {
         try
-        {   require_once($_SERVER['DOCUMENT_ROOT'].'../utils/JSONUtils.php');
+        {   require_once($_SERVER['DOCUMENT_ROOT'].'/projectAI/utils/JSONUtils.php');
             require_once 'connection_data.php';
             $this->db = new PDO('mysql:host='.$server_address.';dbname='.$db_name.';charset=utf8', $user_login
                 , $user_password);
@@ -79,6 +79,13 @@ class DBConnector
         }
     }
 
+    public function doQuery($queryString) {
+
+    }
+
+    public function doExec($execQuery) {
+
+    }
 }
 
 
